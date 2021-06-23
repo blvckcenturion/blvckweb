@@ -17,7 +17,7 @@ align-items: center;
 z-index: 100;
 background-color: transparent;
 border: 2px solid var(--blvck);
-font-family: 'Roboto Mono';
+font-family: 'SFProDisplay';
 opacity: 0;
 `
 export const Social = styled(motion.a)`
@@ -56,7 +56,7 @@ letter-spacing: 0.1em;
 export const Links = styled(Div)`
 border-right: 2px solid var(--blvck);
 box-sizing: border-box;
-padding-left: 10%;
+padding-left: 5%;
 @media (max-width: 767px) {
     border: none;
     padding: 0;

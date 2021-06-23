@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import React from 'react'
+import {H1,H2,H3, Text, P} from '../components/GlobalComponents'
 
 const Home = () => {
     const TestDiv = styled.div`
@@ -8,90 +9,15 @@ const Home = () => {
         border: 2px solid green;
         text-align:center;
         font-size: 30px;
+        padding-top: 100px
     `
     return (
         <TestDiv>
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-            Hello God
-            <br />
-
-
+            <H1>WELCOME</H1>
+            <H2>00-1 / 2021</H2>
+            <H3>+ ABOUT-ME®</H3>
+            <P>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the </P>
+            
         </TestDiv>
     )
 }

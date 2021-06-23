@@ -11,6 +11,7 @@ import PageLoader from './components/PageLoader'
 const Home = lazy(() => import('./pages/Home'))
 const Blog = lazy(() => import('./pages/Blog'))
 const Metrics = lazy(() => import('./pages/Metrics'))
+const About = lazy(() => import('./pages/About'))
 
 const App = () => {
     return (
@@ -20,15 +21,10 @@ const App = () => {
                 <Aside />
                 <Navigation />
                 <Switch>
-                    <Route path="/">
-                        <Home/>
-                    </Route>
-                    <Route path="/blog" exact>
-                        <Blog/>
-                    </Route>
-                    <Route path="/metrics" exact>
-                        <Metrics/>
-                    </Route>
+                    <Route path="/" component={Home} exact/>
+                    <Route path="/blog" component={Blog}/>
+                    <Route path="/metrics" component={Metrics}/>
+                    <Route path="/about" component={About}/>
                 </Switch>
             </Router>
         </Suspense>

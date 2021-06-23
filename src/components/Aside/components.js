@@ -22,6 +22,7 @@ margin: 50px 0;
 text-align: start;
 `
 export const Slogan = styled(Name)`
-font-family: 'Roboto Mono';
+font-family: "SFProDisplay";
 font-size: 1rem;
+letter-spacing: 2px;
 `

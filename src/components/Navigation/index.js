@@ -60,13 +60,14 @@ const Navigation = () => {
                                     .map((e, i) =>
                                         <Link
                                             onClick={() => { setIsOpen(!isOpen) }}
-                                            style={{ textDecoration: "none", color: "var(--white)" }}
+                                            style={{ textDecoration: "none"}}
                                             to={e.to}
                                             key={i}>
                                             <H1
                                                 initial={false}
                                                 transition={{ duration: .4, delay: ((isOpen ? .7 : 0) + (i * .4)), ...defaultTransition }}
                                                 animate={animate}
+                                                color={"var(--white)"}
                                                 variants={headingVariants}>{e.text}</H1>
                                         </Link>)
                             }

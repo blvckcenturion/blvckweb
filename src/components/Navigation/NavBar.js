@@ -14,7 +14,7 @@ const NavBar = ({ isOpen, triggerNav }) => {
             height={width >= 700 ? "10%" : "12%"}
             animate={isOpen ? "open" : "closed"}
             variants={NavVariants}
-            transition={{ delay: MediumScreen ? isOpen ? 0.2 : 4.6 : isOpen ? 0.3 : 1.95 }}>
+            transition={{ delay: MediumScreen ? isOpen ? 0.3 : 3.2 : isOpen ? 0.3 : 1.95 }}>
             <Div
                 animate={{ scaleX: [0, 1], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}

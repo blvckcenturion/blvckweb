@@ -8,15 +8,38 @@ export const MediumScreen = width >= 768
 export const BigScreen = width >= 1000
 
 export const H1 = styled(motion.h1)`
-font-size: 3vw; 
+font-size: 3.75vw; 
 font-family: 'Extended Main';
 color: ${props => props.color ? props.color : "var(--blvck)"};
 @media (min-width: 768px) and (max-width: 1050px){
     font-size: 4vw;
 }
 @media (max-width: 767px){
-    font-size: 5vw;
+    font-size: 7vw;
 }
+`
+
+export const H2 = styled(motion.h2)`
+    font-size: 1.75vw;
+    font-family: 'Extended Main';
+    color: ${props => props.color ? props.color : "var(--green)"};
+    @media (min-width: 768px) and (max-width: 1050px){
+        font-size: 2vw;
+    }
+    @media (max-width: 767px){
+        font-size: 3.75vw;
+    }
+`
+export const H3 = styled(motion.h3)`
+    font-size: 2vw;
+    font-family: 'Extended Main';
+    color: ${props => props.color ? props.color : "var(--blvck)"};
+    @media (min-width: 768px) and (max-width: 1050px){
+        font-size: 2.5vw;
+    }
+    @media (max-width: 767px){
+        font-size: 4.5vw;
+    }
 `
 
 export const Div = styled(motion.div)`
@@ -29,10 +52,24 @@ export const Div = styled(motion.div)`
 `
 
 export const Text = styled.p`
-font-size: 2vh;
-font-family: 'Roboto Mono';
+font-size: 2.5vh;
+font-family: 'SFProDisplay';
 text-align: justify;
+letter-spacing: 2px;
 margin: 0;
+`
+export const P = styled.p`
+font-size: 2.3vw;
+font-family: 'SFProDisplay';
+text-align: justify;
+letter-spacing: 5px;
+margin: 0;
+@media (min-width: 768px) and (max-width: 1050px){
+    font-size: 3.5vw;
+}
+@media (max-width: 767px){
+    font-size: 4.5vw;
+}
 `
 
 const Logo = motion(logo);
