@@ -87,3 +87,35 @@ export const AnimatedLogo = () => {
 }
 
 export const defaultTransition = { stiffness: 1000, type: "tween" }
+
+export const CircularButton = ({children, onClick}) => {
+    const Button = styled(motion.button)`
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    `
+    const ButtonText = styled.p`
+        height: 15vw;
+        position: absolute;
+        color: ${props => props.color ? props.color : "var(--blvck)"};
+        transform: rotate(${props => props.deg}deg);
+        // transform-origin: 0 100%;
+        margin: 0;
+        
+    `
+    const deg = 360 / children.length
+    return (
+        <Button animate={{rotate:[0,-360]}} transition={{ duration: 6, repeatType: "loop", repeatDelay: 0, repeat: Infinity }} onClick={() => console.log('sapo')}>
+            {children.split("").map((e,i) => {
+                return <ButtonText key={i} deg={`${i*deg}`}>{e}</ButtonText>
+            })}
+        </Button>
+    )
+}

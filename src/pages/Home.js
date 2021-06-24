@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import {H1,H2,H3, Text, P} from '../components/GlobalComponents'
+import {H1,H2,H3, Text, P, CircularButton} from '../components/GlobalComponents'
+import { motion } from 'framer-motion'
+
+
 
 const Home = () => {
     const TestDiv = styled.div`
@@ -17,7 +20,7 @@ const Home = () => {
             <H2>00-1 / 2021</H2>
             <H3>+ ABOUT-ME®</H3>
             <P>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the </P>
-            
+            <CircularButton>CHECKOUT-MY-SKILLS-</CircularButton>            
         </TestDiv>
     )
 }
