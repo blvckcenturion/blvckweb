@@ -19,6 +19,7 @@ background-color: transparent;
 border: 2px solid var(--blvck);
 font-family: 'SFProDisplay';
 opacity: 0;
+z-index: 100;
 `
 export const Social = styled(motion.a)`
 width: 100%;

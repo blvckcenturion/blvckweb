@@ -9,6 +9,7 @@ top: 0;
 opacity: 0;
 border-right: 2px solid var(--blvck);
 z-index: 100;
+box-sizing: border-box;
 @media (min-width: 2000px){
     width: 7vw;
 }

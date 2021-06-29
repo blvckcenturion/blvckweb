@@ -11,7 +11,7 @@ const NavBar = ({ isOpen, triggerNav }) => {
     return (
         <NavDiv
             initial={false}
-            height={width >= 700 ? "10%" : "12%"}
+            height={"11vh"}
             animate={isOpen ? "open" : "closed"}
             variants={NavVariants}
             transition={{ delay: MediumScreen ? isOpen ? 0.3 : 3.2 : isOpen ? 0.3 : 1.95 }}>

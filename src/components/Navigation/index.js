@@ -18,7 +18,7 @@ const Navigation = () => {
     const [timerDone, setTimerDone] = useState(true)
     const sections = [{ text: t("navigation.titles.about"), to: "/about" }, { text: t("navigation.titles.metrics"), to: "/metrics" }, { text: t("navigation.titles.blog"), to: "/blog" }]
     const animate = isOpen ? "open" : "closed"
-    const triggerNav = () => {
+    const triggerNav = (e) => {
         if (timerDone) {
             setIsOpen(!isOpen)
             setTimerDone(false)
@@ -26,7 +26,6 @@ const Navigation = () => {
         }
     }
     const opacity = [0, 1]
-
     return (
         <>
             {
