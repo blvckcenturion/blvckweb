@@ -1,11 +1,8 @@
 import styled from "@emotion/styled"
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 import { ReactComponent as logo } from '../assets/images/logo.svg'
-import useWindowDimensions from "../utils/WindowDimensions"
-const { width } = useWindowDimensions;
-
-export const MediumScreen = width >= 768
-export const BigScreen = width >= 1000
+import React, { useEffect } from "react"
+import { useInView } from 'react-intersection-observer'
 
 export const H1 = styled(motion.h1)`
 font-size: 3.75vmax; 
@@ -170,3 +167,41 @@ background-color: ${props => props.bgColor};
     width: 93%;
 }
 `
+
+export const generalVariants = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 }
+}
+
+export const Section = ({ primary, title, id, children }) => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ trackVisibility: false, triggerOnce: true });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
+    
+    return (
+        <SectionWrapper
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            transition={{ duration: 0.7 }}
+            variants={generalVariants}>
+            <Div height={"20%"}>
+                <Div height={"50%"} direction={"row"}>
+                    <Div width={"60%"} style={{ borderTop: "3px solid var(--blvck)", order: `${primary ? "0" : "2"}`, boxSizing: "border-box" }} />
+                    <Div width={"40%"} justify={"flex-end"} align={primary ? "flex-start" : "flex-end"}>
+                        <H2 style={{ margin: "0" }}>00-{id}/{new Date().getFullYear()}</H2>
+                    </Div>
+                </Div>
+                <Div height={"50%"}>
+                    <H3>+ {title}®</H3>
+                </Div>
+            </Div>
+            {children}
+        </SectionWrapper>
+    );
+}

@@ -22,20 +22,15 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: #F5F5F5;
   font-family: "SFProDisplay";
   height: 100%;
   overflow-x: hidden;
+  
 }
 
 ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-@keyframes infiniteLoop {
-  100%{
-    background-position: 800px -800px;
-  }
 }

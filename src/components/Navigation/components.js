@@ -91,7 +91,7 @@ export const NavDiv = styled(Div)`
 position: fixed;
 box-sizing: border-box;
 z-index: 100;
-background-color: var(--white);
+background-color: #F5F5F5;
 `
 
 export const Title = styled(motion.h2)`
@@ -104,7 +104,7 @@ export const NavVariants = {
         backgroundColor: 'transparent',
     },
     closed: {
-        backgroundColor: 'var(--white)'
+        backgroundColor: '#F5F5F5'
     }
 }
 export const headingVariants = {
