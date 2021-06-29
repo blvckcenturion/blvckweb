@@ -41,10 +41,14 @@ const Section = ({ primary }) => {
     const Img = styled.div`
         width: 70%;
         height: 80%;
-        background:url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+        background:url("https://www.transparenttextures.com/patterns/wall-4-light.png");
+        //"https://www.transparenttextures.com/patterns/xv.png"
+        //"https://www.transparenttextures.com/patterns/axiom-pattern.png"
+        //"https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"
         background-color: #0d0d0d;
         -webkit-box-shadow: 0px 0px 27px 6px rgba(0,0,0,0.28); 
         box-shadow: 0px 0px 27px 6px rgba(0,0,0,0.28);
+        animation: infiniteLoop 20s linear infinite;
         @media(max-width:999px){
             width: 100%;
             height: 70%;

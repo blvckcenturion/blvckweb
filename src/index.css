@@ -33,3 +33,9 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes infiniteLoop {
+  100%{
+    background-position: 800px -800px;
+  }
+}
