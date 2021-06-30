@@ -77,10 +77,10 @@ export const AnimatedLogo = () => {
     return (
         <Div
             animate={{ y: [-200, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.7, delay: 0.7 }}>
+            transition={{ duration: 0.5, delay: 0.5 }}>
             <Logo
                 animate={{ rotate: [-180, 0] }}
-                transition={{ duration: 0.6, delay: 1.4 }} />
+                transition={{ duration: 0.4, delay: 1 }} />
         </Div>
     )
 }
@@ -201,7 +201,9 @@ export const Section = ({ primary, title, id, children }) => {
                     <H3>+ {title}®</H3>
                 </Div>
             </Div>
-            {children}
+            <Div height={"80%"}>
+                {children}
+            </Div>
         </SectionWrapper>
     );
 }

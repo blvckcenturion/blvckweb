@@ -12,10 +12,10 @@ const Aside = () => {
     return (
         width >= 1000 &&
         <Wrapper
-            animate={{ scaleY: [0, 1], opacity: [0, 1] }} transition={{ delay: 0, duration: 0.7 }}>
+            animate={{ scaleY: [0, 1], opacity: [0, 1] }} transition={{ delay: 0, duration: 0.5 }}>
             <Div
                 animate={{ scaleX: [0, 1], opacity: [0, 1] }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.5, duration: 0.3 }}
                 height={"20%"} style={{ borderBottom: "2px solid var(--blvck)" }}
                 justify={"center"}>
                 <AnimatedLogo />
@@ -23,18 +23,18 @@ const Aside = () => {
             <Div height={"65%"} direction={"row"} align={"start"}>
                 <Slogan
                     animate={{ scaleX: [0, 1], opacity: [0, 1] }}
-                    transition={{ delay: 2.8, duration: 0.3 }}
+                    transition={{ delay: 1.8, duration: 0.3 }}
                     style={{ height: "55vh" }}>{t('slogan')}</Slogan>
                 <Name
                     animate={{ scaleX: [0, 1], opacity: [0, 1] }}
-                    transition={{ delay: 2, duration: 0.8 }}>BLVCK CENTURION</Name>
+                    transition={{ delay: 1.4, duration: 0.4 }}>BLVCK CENTURION</Name>
             </Div>
             <Div
                 animate={{ scaleX: [0, 1], opacity: [0, 1] }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.5, duration: 0.3 }}
                 height={"15%"}
                 style={{ borderTop: "2px solid var(--blvck)" }}>
-                <Div animate={{ x: [-120, 0], opacity: [0, 1] }} transition={{ delay: 3.1, duration: 0.5 }}>
+                <Div animate={{ x: [-120, 0], opacity: [0, 1] }} transition={{ delay: 2.1, duration: 0.3 }}>
                     <LanguageSelector />
                 </Div>
             </Div>

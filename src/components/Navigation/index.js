@@ -42,7 +42,7 @@ const Navigation = () => {
                 animate={animate} initial={false}
                 variants={wrapperVariants}
                 transition={{ duration: .4, delay: mediumScreen ? isOpen ? 0 : 3.2 : isOpen ? 0 : 1.9, ...defaultTransition }}>
-                <Global styles={css`body{overflow:${isOpen ? "hidden" : "initial"}}`} />
+                <Global styles={css`html,body{overflow:${isOpen ? "hidden" : "initial"}}`} />
                 <Nav width={"100vw"} direction={"row"} align={bigScreen ? "space-evenly" : "flex-end"}>
                     <Links
                         animate={animate}

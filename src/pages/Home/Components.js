@@ -17,6 +17,7 @@ width: 45vmin;
     width: 60vmin;
     padding-left: 10%;
 }
+opacity: 0;
 `
 
 export const WelcomeText = styled(H1)`
@@ -31,6 +32,7 @@ color: var(--green);
 @media(max-width: 500px){
     top: 25%;
 }
+opacity: 0;
 `
 export const ToText = styled(H1)`
 position: absolute;
@@ -50,6 +52,7 @@ font-size:4.5vmax;
     right: 10%;
 }
 color: var(--green);
+opacity: 0;
 `
 
 export const BlvckCenturionText = styled(H1)`
@@ -67,7 +70,7 @@ color: var(--green);
     top: 52%;
     right: 30%;
 }
-
+opacity: 0;
 `
 
 export const Arrow = styled(FontAwesomeIcon)`
@@ -91,6 +94,7 @@ right: 12%;
 @media(max-width: 500px){
     bottom: 4%;
 }
+opacity: 0;
 `
 
 const Grid = styled(Div)`
@@ -119,7 +123,7 @@ box-shadow: 0px 0px 27px 6px rgba(0,0,0,0.28);
 export const HomeSection = ({primary, title, id, parragraph, to,src, btnText}) => {
     return (
         <Section primary={primary} title={title} id={id}> 
-            <Grid height={"80%"} primary={primary}>
+            <Grid primary={primary}>
                 <Div justify={"flex-start"} style={{ gridArea: `${primary ? "a" : "b"}` }}>
                     <Div width={"80%"} height={"60%"} >
                         <P>{parragraph}</P>
