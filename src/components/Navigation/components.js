@@ -15,7 +15,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 z-index: 100;
-background-color: transparent;
+background-color: #F5F5F5;
 border: 2px solid var(--blvck);
 font-family: 'SFProDisplay';
 opacity: 0;

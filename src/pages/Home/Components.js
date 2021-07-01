@@ -12,6 +12,7 @@ width: 45vmin;
 @media(max-width:999px) and (min-width:501px){
     top: 20%;
 }
+
 @media(max-width: 500px){
     top: 25%;
     width: 60vmin;

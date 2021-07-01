@@ -117,7 +117,6 @@ export const CircularButton = ({ children, onClick, color }) => {
         }
         
     `
-
     const H4 = styled.h4`
         font-size: 1.3vmax;
         font-family: 'Extended Main';
@@ -148,11 +147,12 @@ align-items: flex-end;
 @media(max-width: 999px){
     padding-top: 11vh;
 }
+overflow-x: hidden;
 `
 
 export const SectionWrapper = styled(motion.section)`
 width:calc(100% - 120px);
-height: 100vh;
+height: ${props => props.height ? props.height : "100vh"};
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -160,7 +160,7 @@ justify-content: center;
 box-sizing: border-box;
 background-color: ${props => props.bgColor};
 @media(max-width: 999px){
-    height: 89vh;
+    height: ${props => props.height ? props.height : "89vh"};
     width: 100%;
 }
 @media (min-width: 2000px){
@@ -173,7 +173,7 @@ export const generalVariants = {
     hidden: { opacity: 0, scale: 0 }
 }
 
-export const Section = ({ primary, title, id, children }) => {
+export const Section = ({ primary, title, id, children, height,divHeight }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({ trackVisibility: false, triggerOnce: true });
 
@@ -189,8 +189,9 @@ export const Section = ({ primary, title, id, children }) => {
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.7 }}
-            variants={generalVariants}>
-            <Div height={"20%"}>
+            variants={generalVariants}
+            height={height}>
+            <Div height={divHeight ? divHeight : "20%"}>
                 <Div height={"50%"} direction={"row"}>
                     <Div width={"60%"} style={{ borderTop: "3px solid var(--blvck)", order: `${primary ? "0" : "2"}`, boxSizing: "border-box" }} />
                     <Div width={"40%"} justify={"flex-end"} align={primary ? "flex-start" : "flex-end"}>
